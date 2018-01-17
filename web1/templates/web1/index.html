@@ -12,11 +12,23 @@
             color: rgb(246, 131, 31);
         }
 
+        h2  {
+            text-align: center;
+            color: rgb(246, 131, 31);
+            border: 2px solid rgb(246, 131, 31);
+            background-image: url(../../static/web1/h2bg.png);
+            font-size: 175%;
+            font-weight: bold;
+            line-height: 1.4;
+            text-shadow: black 0 0 5px;
+        }
+
         .page-header    {
-            position: fixed;
-            top: -20px;
-            left: -10px;
-            width: 101%;
+            position: relative;
+            top: -50px;
+            left: -8px;
+            width: 101.66%;
+            min-height: 250px;
             background-image: url(../../static/web1/header-image.png);
             background-size: 100%;
             background-repeat: no-repeat;
@@ -25,16 +37,16 @@
 
         .top-img    {
             position: absolute;
-            left: 15px;
-            top: -5px;
+            left: 10px;
+            top: -10px;
         }
 
         .page-header h1 { 
             position: relative;
             margin-bottom: 3px;
-            text-align: left;
-            padding-top: 37px;
             padding-left: 150px;
+            text-align: left;
+            padding-top: 65px;
             font-size: 350%; 
             font-family: Garamond, Helvetica, Bookman, Palatino, sans-serif; 
             font-weight: bold;
@@ -44,8 +56,8 @@
         }
 
         .links  {
-            position: fixed;
-            right: 0;
+            position: absolute;
+            right: 15px;
         }
 
         .links li   {
@@ -53,6 +65,10 @@
             list-style: none;
             margin-right: 20px;
             margin-top: 15px;
+        }
+
+        .links li:nth-child(4)   {
+            margin-right: 0px;
         }
 
         .links a   {
@@ -67,16 +83,30 @@
             position: absolute;
             font-family: Garamond, sans-serif;
             right: 0;
-            top: 95px;
+            top: 195px;
             text-align: right;
             color: white;
-            text-shadow: black 0 0 2px;
-            font-size: 80%;
-            padding-right: 10px;
+            text-shadow: black 0 0 4px;
+            font-size: 100%;
+            padding-right: 5px;
         }
 
-        .new    {
-            margin-top: 150px;
+        .baby   {
+            position: relative;
+            margin-left: 20px;
+            margin-top: -200px;
+            margin-bottom: -182px;
+        }
+
+        .new_h2 {
+            width: 97.85%;
+            margin-left: -8px;
+            border: none;
+            border-bottom: 2px solid rgb(246, 131, 31);
+            text-align: left;
+            padding-left: 35px;
+            color: black;
+            text-shadow: rgb(246, 131, 31) 0 0 5px;
         }
 
         .page-footer    {
@@ -95,6 +125,7 @@
             position: absolute;
             bottom: 32px;
             left: 55px;
+            color: black;
         }
 
         .logo   {
@@ -107,6 +138,7 @@
             position: absolute;
             bottom: 12px;
             left: 55px;
+            color: black;
         }
 
         .developer a {
@@ -183,8 +215,11 @@
         but only a few can get results of it.</p>
     </div>
 
-    <div class="new">
-        <h2>New</h2>
+    <div>
+        <p class="baby">
+            <img src="../../static/web1/wiki-2.png" alt="Description">
+        </p>
+        <h2 class="new_h2">New</h2>
         <h3>Angel 1..</h3>
         <table>
             <tr>
@@ -236,7 +271,6 @@
                 <i>Source: <a href="https://ru.wikipedia.org">ru.wikipedia.org</a></i>
             </dt>
             <dd>
-                <img src="../../static/web1/wiki-2.png" alt="Description">
                 <p>Description</p>
             </dd>
         </dl>
