@@ -44,6 +44,7 @@
             position: absolute;
             left: 10px;
             top: -10px;
+            z-index: 1;
         }
 
         .page-header h1 { 
@@ -64,6 +65,7 @@
             position: absolute;
             top: 10px;
             right: 20px;
+            z-index: 0;
         }
 
         .links li   {
@@ -91,6 +93,7 @@
             text-shadow: black 0 0 4px;
             font-size: 100%;
             padding-right: 5px;
+            z-index: 1;
         }
 
         .baby   {
@@ -98,6 +101,7 @@
             margin-left: 20px;
             margin-top: -200px;
             margin-bottom: -182px;
+            z-index: 0;
         }
 
         .new_h2 {
@@ -111,9 +115,39 @@
             border-right: 2px solid rgb(246, 131, 31);
         }
 
+        .welcome    {
+            position: relative;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 200%;
+            text-shadow: white 0 0 2px;
+            z-index: 1;
+        }
+
+        .glass-girl   {
+            position: absolute;
+            right: 0;
+            margin-top: -25px;
+            padding-right: 25px;
+        }
+
         .center {
             display: inline;
             padding-left: 70px;
+        }
+
+        .books  {
+            position: absolute;
+            right: 0;
+            margin-right: 100px;
+            margin-top: 50px;
+            margin-bottom: 90px;
+            z-index: 0;
+        }
+
+        .inputs {
+            position: relative;
+            z-index: 1;
         }
 
         .feedback {
@@ -147,13 +181,6 @@
 
         .button:active {
             background-image: url(../../static/web1/but.png);
-        }
-
-        .books  {
-            position: relative;
-            margin-left: 550px;
-            margin-top: -365px;
-            margin-bottom: 90px;
         }
 
         .sitting    {
@@ -191,14 +218,17 @@
             bottom: 40px;
             left: 55px;
             color: black;
+            z-index: 2;
         }
 
         .logo   {
+            position: relative;
             display: inline-block;
             padding-left: 15px;
             padding-bottom: 5px;
             margin-top: 10px;
             margin-bottom: 10px;
+            z-index: 2;
         }
 
         .developer  {
@@ -206,6 +236,7 @@
             bottom: 15px;
             left: 55px;
             color: black;
+            z-index: 2;
         }
 
         .developer a {
@@ -221,13 +252,15 @@
         }
 
         .social     {
+            position: relative;
             display: inline-block;
             width: 30px;
             height: 30px;
             margin-right: 10px;
             margin-bottom: 0px;
             background: #bdc3c7;
-            background-image: url(../../static/web1/social.png)
+            background-image: url(../../static/web1/social.png);
+            z-index: 1;
         }
 
         .social-fb   {
@@ -242,6 +275,7 @@
             position: absolute;
             right: 75px;
             bottom: 0;
+            z-index: 0;
         }
 
         .downlinks li   {
@@ -287,7 +321,10 @@
             <img src="../../static/web1/wiki-2.png" alt="Description">
         </p>
         <h2 class="new_h2">Dream</h2>
-        <h3>Angels 13</h3>
+        <h3 class="welcome">Angels 13</h3>
+        <p class="glass-girl">
+            <img src="../../static/web1/bottle-left.png" width="209" height="459" alt="One">
+        </p>
         <table>
             <tr>
                 <td>Age</td><td>19</td>
@@ -295,7 +332,6 @@
                 <td>Boobs</td><td>B</td>
             </tr></table>
         <p>She likes to hide in hoods which points at several problems of society.</p>
-        <img src="../../static/web1/bottle-left.png" width="209" height="459" alt="One">
         <p>Temptation of young nature can get you into paradise, but it's just..!</p>
         <p><a href="#">Link1</a> <a href="#">Link2</a> <strong>--.-- price</strong></p>
         <h3>Angel 2..</h3>
@@ -398,6 +434,9 @@
         <h2>Feedback</h2>
         <p class="center">If you have any question please contact us. In order to buy content also contact us.</p>
         <hr><br>
+        <div class="books">
+            <img src="../../static/web1/book.png" width="256" height="256">
+        </div>
         <form action="" class="inputs" method="post">
             <div class="feedback">
                 <label for="introduction">Name:</label>
@@ -426,7 +465,7 @@
             <br>
             <div class="feedback">
                 <label for="comment">Comments:</label><br>
-                <textarea name="comment" id="comment" rows="10" cols="39"></textarea>
+                <textarea name="comment" id="comment" rows="10" cols="37"></textarea>
             </div>
             <div class="feedback">
                 <span>I'm agree to RSS</span>
@@ -439,9 +478,6 @@
                 <input class="button" type="submit" name="btn" value="Contact us">
             </div><br>
         </form>
-        <div class="books">
-            <img src="../../static/web1/book.png" width="256" height="256">
-        </div>
     </div>
 
         <p class="sitting">
