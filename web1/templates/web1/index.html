@@ -1,510 +1,226 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Sexy day</title>
-    <style type="text/css">
-
-        body    {
-            background-color: rgb(98, 51, 23);
-            background-image: url(../../static/web1/field1.png);
-            background-position: 0 50%;
-            color: rgb(246, 131, 31);
-        }
-        div {
-            padding: 0 0;
-            margin: 0 0;
-        }
-
-        h2  {
-            text-align: center;
-            color: rgb(246, 131, 31);
-            border: 2px solid rgb(246, 131, 31);
-            background-image: url(../../static/web1/h2bg.png);
-            font-size: 175%;
-            font-weight: bold;
-            line-height: 1.4;
-            text-shadow: black 0 0 5px;
-        }
-
-        .page-header    {
-            position: relative;
-            top: -50px;
-            width: auto;
-            min-height: 250px;
-            background-image: url(../../static/web1/header-image.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: 0 50%;
-            border-left: 2px solid rgb(246, 131, 31);
-            border-right: 2px solid rgb(246, 131, 31);
-        }
-
-        .top-img    {
-            position: absolute;
-            left: 10px;
-            top: -10px;
-            z-index: 1;
-        }
-
-        .page-header h1 { 
-            position: relative;
-            margin-bottom: 3px;
-            padding-left: 150px;
-            text-align: left;
-            padding-top: 65px;
-            font-size: 350%; 
-            font-family: Garamond, Helvetica, Bookman, Palatino, sans-serif; 
-            font-weight: bold;
-            color: rgb(246, 88, 1);
-            text-shadow: black 0 0 5px;
-            letter-spacing: 3px;
-        }
-
-        .links  {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            z-index: 0;
-        }
-
-        .links li   {
-            display: inline-block;
-            list-style: none;
-            margin-right: 20px;
-            margin-top: 15px;
-        }
-
-        .links a   {
-            display: block;
-            text-decoration: none;
-            font-size: 135%;
-            color: rgb(246, 131, 31);
-            text-shadow: black 0 0 3px;
-        }
-
-        .sic    {
-            position: absolute;
-            font-family: Garamond, sans-serif;
-            right: 0;
-            top: 195px;
-            text-align: right;
-            color: white;
-            text-shadow: black 0 0 4px;
-            font-size: 100%;
-            padding-right: 5px;
-            z-index: 1;
-        }
-
-        .baby   {
-            position: relative;
-            margin-left: 20px;
-            margin-top: -200px;
-            margin-bottom: -182px;
-            z-index: 0;
-        }
-
-        .new_h2 {
-            border: none;
-            text-align: left;
-            padding-left: 15px;
-            color: black;
-            text-shadow: rgb(246, 131, 31) 0 0 5px;
-            border-bottom: 2px solid rgb(246, 131, 31);
-            border-left: 2px solid rgb(246, 131, 31);
-            border-right: 2px solid rgb(246, 131, 31);
-        }
-
-        .welcome    {
-            position: relative;
-            text-align: center;
-            padding-top: 15px;
-            font-size: 200%;
-            text-shadow: white 0 0 2px;
-            z-index: 1;
-        }
-
-        .glass-girl   {
-            position: absolute;
-            right: 0;
-            margin-top: -25px;
-            padding-right: 25px;
-        }
-
-        .center {
-            display: inline;
-            padding-left: 70px;
-        }
-
-        .books  {
-            position: absolute;
-            right: 0;
-            margin-right: 100px;
-            margin-top: 50px;
-            margin-bottom: 90px;
-            z-index: 0;
-        }
-
-        .inputs {
-            position: relative;
-            z-index: 1;
-        }
-
-        .feedback {
-            padding-left: 70px;
-            line-height: 25px;
-        }
-
-        .feedback input, .feedback select {
-            position: absolute;
-            left: 200px;
-        }
-
-        .feedback span  {
-            padding-left: 145px;
-        }
-
-        #checkbox  {
-            position: relative;
-            margin-left: -185px;
-        }
-
-        .button {
-            margin-left: 175px;
-            font-weight: bold;
-            background-image: url(../../static/web1/but.png);
-        }
-
-        .button:hover {
-            background-image: url(../../static/web1/but.png);
-        }
-
-        .button:active {
-            background-image: url(../../static/web1/but.png);
-        }
-
-        .sitting    {
-            position: relative;
-            text-align: center;
-            margin-bottom: -68px;
-            margin-top: -20px;
-            margin-left: -25px;
-        }
-
-        .sit2 {
-            border: none;
-            margin-bottom: -15px;
-            text-shadow: rgb(246, 131, 31) 0 0 5px;
-            border-top: 2px solid rgb(246, 131, 31);
-            border-left: 2px solid rgb(246, 131, 31);
-            border-right: 2px solid rgb(246, 131, 31);
-            position: 0 250px;
-        }
-
-        .page-footer    {
-            position: relative;
-            bottom: -15px;
-            width: auto;
-            background-image: url(../../static/web1/footer-image.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: 0 50%;
-            border-left: 2px solid rgb(246, 131, 31);
-            border-right: 2px solid rgb(246, 131, 31);
-        }
-
-        .rights {
-            position: absolute;
-            bottom: 40px;
-            left: 55px;
-            color: black;
-            z-index: 2;
-        }
-
-        .logo   {
-            position: relative;
-            display: inline-block;
-            padding-left: 15px;
-            padding-bottom: 5px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            z-index: 2;
-        }
-
-        .developer  {
-            position: absolute;
-            bottom: 15px;
-            left: 55px;
-            color: black;
-            z-index: 2;
-        }
-
-        .developer a {
-            text-decoration: none;
-            font-family: Garamond, Helvetica, Bookman, Palatino, sans-serif; 
-            font-weight: bold;
-            color: white;
-            text-shadow: black 0 0 3px;
-        }
-
-        .socials   {
-            margin-left: 200px;
-        }
-
-        .social     {
-            position: relative;
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            margin-bottom: 0px;
-            background: #bdc3c7;
-            background-image: url(../../static/web1/social.png);
-            z-index: 1;
-        }
-
-        .social-fb   {
-            background-position: 60px 0;
-        }
-
-        .social-tw   {
-            background-position: 30px 0;
-        }
-
-        .downlinks  {
-            position: absolute;
-            right: 75px;
-            bottom: 0;
-            z-index: 0;
-        }
-
-        .downlinks li   {
-            display: inline-block;
-            list-style: none;
-            margin-right: 20px;
-        }
-
-        .downlinks a   {
-            display: inline-block;
-            text-decoration: none;
-            font-size: 85%;
-            color: rgb(246, 131, 31);
-            text-shadow: black 0 0 3px;
-        }
-
-        .bot-img    {
-            position: absolute;
-            right: 10px;
-            bottom: -10px;
-        }
-
-    </style>
-  </head>
-  <body>
-    <div class="page-header">
-        <p class="top-img">
-            <img src="../../static/web1/logo.png" width="128" height="128" alt="Sexy day">
-        </p>
-        <h1>Sexy   Day</h1>
-        <ul class="links">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Production</a></li>
-            <li><a href="#">Prices</a></li>
-            <li><a href="#">Partners</a></li>
-        </ul>
-        <p class="sic">Anyone can break the rules<br>
+    <link rel="stylesheet" href="../../static/web1/style.css">
+</head>
+<body>
+<div class="page-header">
+    <p class="top-img">
+        <img src="../../static/web1/logo.png" width="128" height="128" alt="Sexy Day">
+    </p>
+    <h1>Sexy Day</h1>
+    <ul class="links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Production</a></li>
+        <li><a href="#">Prices</a></li>
+        <li><a href="#">Partners</a></li>
+    </ul>
+    <p class="sic">Anyone can break the rules<br>
         but only a few can get results of it.</p>
-    </div>
+</div>
 
-    <div>
-        <p class="baby">
-            <img src="../../static/web1/wiki-2.png" alt="Description">
-        </p>
-        <h2 class="new_h2">Dream</h2>
-        <h3 class="welcome">Angels 13</h3>
-        <p class="glass-girl">
-            <img src="../../static/web1/bottle-left.png" width="209" height="459" alt="One">
-        </p>
-        <table>
-            <tr>
-                <td>Age</td><td>19</td>
-            </tr><tr>
-                <td>Boobs</td><td>B</td>
-            </tr></table>
-        <p>She likes to hide in hoods which points at several problems of society.</p>
-        <p>Temptation of young nature can get you into paradise, but it's just..!</p>
-        <p><a href="#">Link1</a> <a href="#">Link2</a> <strong>--.-- price</strong></p>
-        <h3>Angel 2..</h3>
-        <table>
-            <tr>
-                <td>Age</td><td>19</td>
-            </tr><tr>
-                <td>Boobs</td><td>B</td>
-            </tr></table>
-        <p>Description</p>
-        <img src="../../static/web1/bottle-right.png" width="248" height="459" alt="Two">
-        <p>Description</p>
-        <p><a href="#">Link1</a> <a href="#">Link2</a> <strong>--.-- price</strong></p>
-    </div>
+<div>
+    <p class="baby">
+        <img src="../../static/web1/wiki-2.png" alt="Pretty girl">
+    </p>
+    <h2 class="new_h2">Dream</h2>
+    <h3 class="welcome">Angels 13</h3>
+    <p class="glass-girl">
+        <img src="../../static/web1/bottle-left.png" width="209" height="459" alt="Another girl">
+    </p>
+    <table>
+        <tr>
+            <td>Age</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Boobs</td>
+            <td>B</td>
+        </tr>
+    </table>
+    <p>She likes to hide in hoods which points at several problems of society.</p>
+    <p>Temptation of young nature can get you into paradise, but it's just..!</p>
+    <p><a href="#">Link1</a> <a href="#">Link2</a> <strong>--.-- price</strong></p>
+    <h3>Angel 2..</h3>
+    <table>
+        <tr>
+            <td>Age</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Boobs</td>
+            <td>B</td>
+        </tr>
+    </table>
+    {% extends "web1.base.html" %}
+    <p>Description</p>
+    <img src="../../static/web1/bottle-right.png" width="248" height="459" alt="Two">
+    <p>Description</p>
+    <p><a href="#">Link1</a> <a href="#">Link2</a> <strong>--.-- price</strong></p>
+</div>
 
-    <div class="advantage">
-        <ul>
-            <li><h2>Name</h2>
-                <p>Description</p></li>
-            <li><h2>Name</h2>
-                <p>Description</p></li>
-            <li><h2>Name</h2>
-                <p>Description</p></li>
-        </ul>
-    </div>
+<div class="advantage">
+    <ul>
+        <li><h2>Name</h2>
+            <p>Description</p></li>
+        <li><h2>Name</h2>
+            <p>Description</p></li>
+        <li><h2>Name</h2>
+            <p>Description</p></li>
+    </ul>
+</div>
 
-    <div class="history">
-        <h2>Name</h2>
-        <dl>
-            <dt>
-                <h3>Name</h3>
-                <i>Source: <a href="https://ru.wikipedia.org">ru.wikipedia.org</a></i>
-            </dt>
-            <dd>
-                <img src="../../static/web1/wiki-1.png" alt="Description">
-                <p>Description</p>
-            </dd>
-            <dt>
-                <h3>Name</h3>
-                <i>Source: <a href="https://ru.wikipedia.org">ru.wikipedia.org</a></i>
-            </dt>
-            <dd>
-                <p>Description</p>
-            </dd>
-        </dl>
-        
-    </div>
-
-    <div class="press">
-        <h2>Name</h2>
-        <blockquote>
+<div class="history">
+    <h2>Name</h2>
+    <dl>
+        <dt>
+            <h3>Name</h3>
+            <i>Source: <a href="https://ru.wikipedia.org">ru.wikipedia.org</a></i>
+        </dt>
+        <dd>
+            <img src="../../static/web1/wiki-1.png" alt="Description">
             <p>Description</p>
-            <p><i>Description</i> <a href="#">...</a></p>
-        </blockquote>
-                
-    </div>
+        </dd>
+        <dt>
+            <h3>Name</h3>
+            <i>Source: <a href="https://ru.wikipedia.org">ru.wikipedia.org</a></i>
+        </dt>
+        <dd>
+            <p>Description</p>
+        </dd>
+    </dl>
 
-    <div class="price">
-        <h2>Name</h2>
-        <table>
-            <tr>
-                <th>tab1</th>
-                <th>tab2.</th>
-                <th>tab3</th>
-                <th>tab4</th>
-                <th>tab5</th>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-            </tr>
-            <tr>
-                <td>Description <sup>Description</sup></td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-            </tr>
-            <tr>
-                <td>Description <sup>Description</sup></td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-                <td>list</td>
-            </tr>
-        </table>
-    </div>
+</div>
 
-    <div class="order">
-        <h2>Feedback</h2>
-        <p class="center">If you have any question please contact us. In order to buy content also contact us.</p>
-        <hr><br>
-        <div class="books">
-            <img src="../../static/web1/book.png" width="256" height="256">
+<div class="press">
+    <h2>Name</h2>
+    <blockquote>
+        <p>Description</p>
+        <p><i>Description</i> <a href="#">...</a></p>
+    </blockquote>
+
+</div>
+
+<div class="price">
+    <h2>Name</h2>
+    <table>
+        <tr>
+            <th>tab1</th>
+            <th>tab2.</th>
+            <th>tab3</th>
+            <th>tab4</th>
+            <th>tab5</th>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+        </tr>
+        <tr>
+            <td>Description <sup>Description</sup></td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+        </tr>
+        <tr>
+            <td>Description <sup>Description</sup></td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+            <td>list</td>
+        </tr>
+    </table>
+</div>
+
+<div class="order">
+    <h2>Feedback</h2>
+    <p class="center">If you have any question please contact us. In order to buy content also contact us.</p>
+    <hr>
+    <br>
+    <div class="books">
+        <img src="../../static/web1/book.png" width="256" height="256" alt="Books">
+    </div>
+    <form action="" class="inputs" method="post">
+        <div class="feedback">
+            <label for="introduction">Name:</label>
+            <input type="text" name="introduction" id="introduction">
         </div>
-        <form action="" class="inputs" method="post">
-            <div class="feedback">
-                <label for="introduction">Name:</label>
-                <input type="text" name="introduction" id="introduction">
-            </div>
-            <div class="feedback">
-                <label for="phone">Phone number:</label>
-                <input type="text" name="phone" id="phone">
-            </div>
-            <div class="feedback">
-                <label for="extra-phone">Skype:</label>
-                <input type="text" name="extra-phone" id="extra-phone">
-            </div>
-            <div class="feedback">
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email">
-            </div>
-            <div class="feedback">
-                <label for="value">Topic:</label>
-                <select name="value" id="value">
-                    <option>production</option>
-                    <option>models</option>
-                    <option>fun time</option>
-                </select>
-            </div>
-            <br>
-            <div class="feedback">
-                <label for="comment">Comments:</label><br>
-                <textarea name="comment" id="comment" rows="10" cols="37"></textarea>
-            </div>
-            <div class="feedback">
-                <span>I'm agree to RSS</span>
-                <label class="checkbox">
-                    <input type="checkbox" name="subscribe" id="checkbox"">
-                </label>
-            </div>
-            <br>
-            <div class="but">
-                <input class="button" type="submit" name="btn" value="Contact us">
-            </div><br>
-        </form>
-    </div>
+        <div class="feedback">
+            <label for="phone">Phone number:</label>
+            <input type="text" name="phone" id="phone">
+        </div>
+        <div class="feedback">
+            <label for="extra-phone">Skype:</label>
+            <input type="text" name="extra-phone" id="extra-phone">
+        </div>
+        <div class="feedback">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div class="feedback">
+            <label for="value">Topic:</label>
+            <select name="value" id="value">
+                <option>production</option>
+                <option>models</option>
+                <option>fun time</option>
+            </select>
+        </div>
+        <br>
+        <div class="feedback">
+            <label for="comment">Comments:</label><br>
+            <textarea name="comment" id="comment" rows="10" cols="37"></textarea>
+        </div>
+        <div class="feedback">
+            <span>I'm agree to RSS</span>
+            <label class="checkbox">
+                <input type="checkbox" name="subscribe" id="checkbox">
+            </label>
+        </div>
+        <br>
+        <div class="but">
+            <input class="button" type="submit" name="btn" value="Contact us">
+        </div>
+        <br>
+    </form>
+</div>
 
-        <p class="sitting">
-            <img src="../../static/web1/sitting.png" width="96" height="96">
-        </p>
-        <h2 class="sit2">___</h2>
-    <div class="page-footer">
-        <p class="bot-img">
-            <img src="../../static/web1/logo.png" width="64" height="64" alt="Sexy day">
-        </p>
-        <ul class="downlinks">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Production</a></li>
-            <li><a href="#">Prices</a></li>
-            <li><a href="#">Partners</a></li>
-        </ul>
-        <span class="developer"><strong>Developer:</strong> <a href="#">Awesome me</a></span><br>
-        <p class="logo">
-            <img src="../../static/web1/rlogo.png" width="27" height="34">
-        </p>
-        <span class="rights">All rights reserved</span>
-        <span class="socials">
+<p class="sitting">
+    <img src="../../static/web1/sitting.png" width="96" height="96">
+</p>
+<h2 class="sit2">___</h2>
+<div class="page-footer">
+    <p class="bot-img">
+        <img src="../../static/web1/logo2.png" width="64" height="64" alt="Sexy Day">
+    </p>
+    <ul class="downlinks">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Production</a></li>
+        <li><a href="#">Prices</a></li>
+        <li><a href="#">Partners</a></li>
+    </ul>
+    <span class="developer"><strong>Developer:</strong> <a href="#">Awesome me</a></span><br>
+    <p class="logo">
+        <img src="../../static/web1/rlogo.png" width="27" height="34">
+    </p>
+    <span class="rights">All rights reserved</span>
+    <span class="socials">
             <a class="social social-vk" href="http://vk.com"></a>
             <a class="social social-fb" href="http://www.facebook.com"></a>
             <a class="social social-tw" href="http://twitter.com"></a>
         </span>
-    </div>
+</div>
 
-  </body>
+</body>
 </html>

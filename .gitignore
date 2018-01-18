@@ -4,3 +4,4 @@ web/__pycache__
 web1/migrations
 web1/__pycache__
 web1/migrations/__pycache__
+web1/templates/web1/index2.html
