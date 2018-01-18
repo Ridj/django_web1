@@ -1,3 +1,4 @@
+{% extends "web1/base.html" %}
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -54,8 +55,9 @@
             <td>B</td>
         </tr>
     </table>
-    {% extends "web1.base.html" %}
+    {% block content %}
     <p>Description</p>
+    {% endblock content %}
     <img src="../../static/web1/bottle-right.png" width="248" height="459" alt="Two">
     <p>Description</p>
     <p><a href="#">Link1</a> <a href="#">Link2</a> <strong>--.-- price</strong></p>
