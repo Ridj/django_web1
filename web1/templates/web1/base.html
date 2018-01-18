@@ -1,9 +1,18 @@
 <p>
-    <a href="{% url 'web1:index' %}">Sexy Day</a>>
+    <a href="{% url 'web1:index' %}">Sexy Day</a> -
     <!--In this example, the template tag  % url 'web1:index' % generates
      a URL matching the URL pattern defined in web1/urls.py with the name
      'index' u. In this example, web1 is the namespace and index is a
      uniquely named URL pattern in that namespace-->
+    <a href="{% url 'web1:topics' %}">Topics</a>
 </p>
 
 {% block content %}{% endblock content %}
+
+<!--In a large project, it’s common to have one parent template called
+ base.html for the entire site and parent templates for each major section
+ of the site. All the section templates inherit from base.html, and each
+ page in the site inherits from a section template. This way you can easily
+ modify the look and feel of the site as a whole, any section in the site,
+ or any individual page. This configuration provides a very efficient way
+ to work, and it encourages you to steadily update your site over time.-->

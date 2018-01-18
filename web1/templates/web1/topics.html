@@ -1,0 +1,26 @@
+{% extends "web1/base.html" %}
+
+{% block content %}
+
+    <p>Topics</p>
+
+    <!--The body of this page contains a bulleted list of the topics that
+     have been entered. In standard HTML, a bulleted list is called an
+     unordered list, indicated by the tags <ul></ul>.-->
+    <ul>
+        {% for topic in topics %}
+            <!--To print a variable in a template, wrap the variable name
+            in double braces.-->
+            <li>
+                <a href="{% url 'web1:topic' topic.id %}">{{ topic }}</a>
+            </li>
+        {% empty %}
+            <!--the % empty % template tag, which tells Django what to do
+            if there are no items in the list.-->
+            <li>No topics have been added yet.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'web1:new_topic' %}">Add a new topic:</a>
+
+{% endblock content %}
