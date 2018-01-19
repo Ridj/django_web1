@@ -1,0 +1,14 @@
+
+body {
+    background: rgb(98, 51, 23) url(field1.png) 0 50%;
+    color: bisque;
+}
+
+.indexlinks a   {
+    float: right;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 135%;
+    text-shadow: black 0 0 3px;
+    color: rgb(246, 131, 31);
+}

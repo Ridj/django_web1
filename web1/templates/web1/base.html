@@ -1,16 +1,17 @@
-<p>
-    <a href="{% url 'web1:index' %}">Sexy Day</a> -
-    <!--In this example, the template tag  % url 'web1:index' % generates
-     a URL matching the URL pattern defined in web1/urls.py with the name
-     'index' u. In this example, web1 is the namespace and index is a
-     uniquely named URL pattern in that namespace-->
-    <a href="{% url 'web1:topics' %}">Topics</a> -
+<link rel="stylesheet" href="../../static/web1/base.css">
+<p class="indexlinks">
+    <a href="{% url 'web1:index' %}">Sexy Day</a>
+    <a href="{% url 'web1:topics' %}">Topics</a>
+        <!--In this example, the template tag  % url 'web1:index' % generates
+         a URL matching the URL pattern defined in web1/urls.py with the name
+         'index' u. In this example, web1 is the namespace and index is a
+         uniquely named URL pattern in that namespace-->
     {% if user.is_authenticated %}
         Hello, {{ user.username }}.
-        <a href="{% url 'users:logout' %}">log out</a>
+        <a href="{% url 'users:logout' %}">Log out</a>
     {% else %}
-        <a href="{% url 'users:register' %}">register</a> -
-        <a href="{% url 'users:login' %}">log in</a>
+        <a href="{% url 'users:login' %}">Log in</a>
+        <a href="{% url 'users:register' %}">Register</a>
     {% endif %}
 </p>
 
