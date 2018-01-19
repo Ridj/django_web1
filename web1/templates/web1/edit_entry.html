@@ -1,0 +1,15 @@
+{% extends 'web1/base.html' %}
+
+{% block content %}
+
+    <p><a href="{% url 'web1:topic' topic.id %}">{{ topic }}</a></p>
+
+    <p>Edit entry:</p>
+
+    <form action="{% url 'web1:edit_entry' entry.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">save changes</button>
+    </form>
+
+{% endblock content %}
