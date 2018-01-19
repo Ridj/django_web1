@@ -1,7 +1,51 @@
 {% extends 'web1/base.html' %}
-
 {% block content %}
+<html>
+<head>
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
 
+        .indexlinks a {
+            color: white;
+        }
+
+        .center {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+        }
+
+        .center form    {
+            position: absolute;
+            top: 25%;
+            left: 15%;
+            font-family: Garamond, sans-serif;
+            font-size: 125%;
+            font-weight: bold;
+            color: white;
+            border: none;
+        }
+
+        .center .bro    {
+            position: absolute;
+            left: 35%;
+            width: 30%;
+            height: 70%;
+            background: white url(../../static/users/ok-icon.png) no-repeat center;
+            border-radius: 50%;
+            border: none;
+        }
+    </style>
+</head>
+
+    <body>
+    <div class="center">
     {% if form.errors %}
     <p>Your username and password did'n match. Please try again.</p>
     {% endif %}
@@ -10,8 +54,11 @@
     {% csrf_token %}
     {{ form.as_p }}
 
-    <button name="submit">log in</button>
+    <button class="bro" name="submit"></button>
     <input type="hidden" name="next" value="{% url 'web1:index' %}" />
     </form>
+    </div>
+    </body>
 
 {% endblock content %}
+</html>

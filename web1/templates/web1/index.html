@@ -153,6 +153,7 @@
         <img src="../../static/web1/book.png" width="256" height="256" alt="Books">
     </div>
     <form action="" class="inputs" method="post">
+        {% csrf_token %}
         <div class="feedback">
             <label for="introduction">Name:</label>
             <input type="text" name="introduction" id="introduction">
