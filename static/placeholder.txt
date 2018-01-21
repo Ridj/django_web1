@@ -1,1 +1,0 @@
-This file ensures that web/static/ will be added to the project.
