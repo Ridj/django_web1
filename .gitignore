@@ -6,3 +6,4 @@ web1/migrations/__pycache__
 users/__pycache__
 users/migrations/__pycache__
 web1/templates/web1/index2.html
+*.sqlite3
