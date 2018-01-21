@@ -150,7 +150,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     # Allow only Heroku to host the project.
-    ALLOWED_HOSTS = ['sexy-day.herokuapp.com']
+    ALLOWED_HOSTS = ['stark-harbor-54108.herokuapp.com']
 
     DEBUG = False
 
