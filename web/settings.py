@@ -152,8 +152,6 @@ if os.getcwd() == '/app':
     # Allow only Heroku to host the project.
     ALLOWED_HOSTS = ['*']
 
-    DEBUG = False
-
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
