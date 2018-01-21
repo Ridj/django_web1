@@ -1,5 +1,5 @@
 {% extends 'web1/base.html' %}
-{% block content %}
+<!--{/% block content %}
 <html>
 <head>
     <style>
@@ -46,19 +46,39 @@
 
     <body>
     <div class="center">
-    {% if form.errors %}
+    {/% if form.errors %}
     <p>Your username and password did'n match. Please try again.</p>
-    {% endif %}
+    {/% endif %}
 
-    <form method="post" action="{% url 'users:login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <form method="post" action="{/% url 'users:login' %}">
+    {/% csrf_token %}
+    {/{ form.as_p }}
 
     <button class="bro" name="submit"></button>
-    <input type="hidden" name="next" value="{% url 'web1:index' %}" />
+    <input type="hidden" name="next" value="{/% url 'web1:index' %}" />
     </form>
     </div>
     </body>
 
+{/% endblock content %}
+</html>-->
+
+{% load bootstrap3 %}
+
+{% block header %}
+    <h2>Log in to your account.</h2>
+{% endblock header %}
+
+{% block content %}
+
+    <form method="post" action="{% url 'users:login' %}" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">Log in</button>
+        {% endbuttons %}
+
+        <input type="hidden" name="next" value="{% url 'web1:topics' %}" />
+    </form>
 {% endblock content %}
-</html>

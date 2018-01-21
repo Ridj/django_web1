@@ -1,6 +1,28 @@
 {% extends "web1/base.html" %}
 
+{% block header %}
+    <!-- jumbotron—a large box that will stand out from the rest of the
+     page and can contain anything you want. It’s typically used on home
+     pages to hold a brief description of the overall project.-->
+    <div class="jumbotron">
+        <h1>Sexy day - produce your dream</h1>
+    </div>
+{% endblock header %}
+
 {% block content %}
-    <p>Sexy Day helps you relax about your sex life and relationships,
-        for any tipic you're finding important.</p>
+    <h2>
+        <a href="{% url 'users:register' %}">Register an account</a> to
+        start making your own Dream-come-true or
+        <a href="{% url 'users:login' %}">Log in</a> if you already have
+        one.
+    </h2>
+    <h2>
+        Sexy Day Production helps you to relax about various hard-to-find
+        steps to your objectives.  Anyone can get life what he deserves, no
+        matter - what aspects of life you thinking about: <b>You Can Get It!</b>
+    <br><br>
+        It can be whatever makes you happy for any thing you're find
+        important: welthness or sex life and some kind of relationships
+        or something else - we can help!
+    </h2>
 {% endblock content %}

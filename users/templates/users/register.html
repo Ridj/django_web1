@@ -1,13 +1,33 @@
 {% extends "web1/base.html" %}
 
-{% block content %}
+<!--{/% block content %}
 
-    <form method="post" action="{% url 'users:register' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
+    <form method="post" action="{/% url 'users:register' %}">
+        {/% csrf_token %}
+        {/{ form.as_p }}
 
         <button name="submit">register</button>
-        <input type="hidden" name="next" value="{% url 'web1:index' %}" />
+        <input type="hidden" name="next" value="{/% url 'web1:index' %}" />
     </form>
 
+{/% endblock content %}-->
+
+{% load bootstrap3 %}
+
+{% block header %}
+    <h2>Registration.</h2>
+{% endblock header %}
+
+{% block content %}
+
+    <form method="post" action="{% url 'users:register' %}" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">Register</button>
+        {% endbuttons %}
+
+        <input type="hidden" name="next" value="{% url 'web1:topics' %}" />
+    </form>
 {% endblock content %}

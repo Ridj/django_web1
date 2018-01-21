@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third party apps
+    'bootstrap3',
+    # Most apps need to be included in INSTALLED_APPS, but to be sure,
+    # read the setup instructions for the particular app you’re using.
+
     # My apps
     'web1',
     'users',
@@ -126,3 +131,10 @@ STATIC_URL = '/static/'
 
 # My settings.
 LOGIN_URL = '/users/login/'
+
+# Settings for django-bootstrap3
+BOOTSTRAP3 = {
+    # This code spares us from having to download jQuery and place it
+    # in the correct location manually.
+    'include_jquery': True,
+}

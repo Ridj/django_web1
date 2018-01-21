@@ -1,28 +1,47 @@
 {% extends "web1/base.html" %}
-
-{% block content %}
+<!--
+{/% block content %}
 
     <p>Add a new topic:</p>
-    <form action ="{% url 'web1:new_topic' %}" method="post">
+    <form action ="{/% url 'web1:new_topic' %}" method="post">
         <!--The  action argument tells the server where to send the data
         submitted in the form; in this case, we send it back to the view
-        function  new_topic() -->
+        function  new_topic()
         <!--The  method argument tells the browser to submit the data as
-        a POST request.-->
-        {% csrf_token %}
+        a POST request.--
+        {/% csrf_token %}
         <!--Django uses the template tag  % csrf_token %  to prevent
         attackers from using the form to gain unauthorized access to the
         server (this kind of attack is called a cross-site request
-        forgery).-->
-        {{ form.as_p }}
+        forgery).--
+        {/{ form.as_p }}
         <!--We only need to include the template variable  { form.as_p }
         for Django to create all the fields necessary to display the
         form automatically. The  as_p  modifier tells Django to render
         all the form elements in paragraph format, which is a simple way
-        to display the form neatly.-->
+        to display the form neatly.--
         <button name="submit">add topic</button>
         <!--Django doesn’t create a submit button for forms, so we
-        define one-->
+        define one--
+    </form>
+
+{/% endblock content %}
+-->
+{% load bootstrap3 %}
+
+{% block header %}
+    <h2>Add a new topic:</h2>
+{% endblock header %}
+
+{% block content %}
+
+    <form action="{% url 'web1:new_topic' %}" method='post' class='form'>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">Add Topic</button>
+        {% endbuttons %}
     </form>
 
 {% endblock content %}

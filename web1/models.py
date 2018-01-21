@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Topic(models.Model):
@@ -10,6 +11,9 @@ class Topic(models.Model):
     # a name, a title, or a city.
     date_added = models.DateTimeField(auto_now_add=True)
     # DateTimeField —a piece of data that will record a date and time.
+    owner = models.ForeignKey(User, on_delete=None)
+    # We add an owner field to  Topic , which establishes a foreign key
+    # relationship to the User model
 
     def __str__(self):
         """Return a string representation of the model."""
